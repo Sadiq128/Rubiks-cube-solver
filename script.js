@@ -60,7 +60,7 @@ class RubiksCube {
     }
   }
   
-  // Fake getCubeSvg function
+// function to show solve cub
   function getCubeSvg(state) {
     return `<pre style="font-size:20px;">Cube: ${state}</pre>`;
   }
@@ -70,12 +70,12 @@ class RubiksCube {
   function displayCube() {
     document.getElementById("cube-visual").innerHTML = getCubeSvg(cube.getCubeStateAsString());
   }
-  
+  // function to mix up the cube
   function scrambleCube() {
     cube.scramble();
     displayCube();
   }
-  
+  // function to solve the cube after mix up
   function solveCube() {
     cube.solve();
     displayCube();
